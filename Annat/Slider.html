@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prisräknare</title>
+<script type="text/javascript">
+	
+var antalsäljare = 1;
+var antalnightshade = 0;
+var antalljus = 0;
+var antaltvål = 0;
+var antalservetter = 0;
+var totalt = 0;
+function säljareFunc(val)
+{
+	antalsäljare = val;
+	totalt = antalsäljare * (antalnightshade*20) + (antalservetter*10) + (antalljus*25) + (antaltvål*5);
+	document.getElementById("Totalförtjänst").innerHTML = totalt;
+}
+function NightshadeFunc(val)
+{
+	antalnightshade = val;
+	document.getElementById("nightbox").value = val;
+	document.getElementById("nightrange").value = val;
+	totalt = antalsäljare * (antalnightshade*20) + (antalservetter*10) + (antalljus*25) + (antaltvål*5);
+	document.getElementById("Totalförtjänst").innerHTML = totalt;
+}
+function LjusFunc(val)
+{
+	antalljus = val;
+	document.getElementById("ljusbox").value = val;
+	document.getElementById("ljusrange").value = val;
+	totalt = antalsäljare * (antalnightshade*20) + (antalservetter*10) + (antalljus*25) + (antaltvål*5);
+	document.getElementById("Totalförtjänst").innerHTML = totalt;
+}
+function bambuFunc(val)
+{
+	antaltvål = val;
+	document.getElementById("tvålbox").value = val;
+	document.getElementById("tvålrange").value = val;
+	totalt = antalsäljare * (antalnightshade*20) + (antalservetter*10) + (antalljus*25) + (antaltvål*5);
+	document.getElementById("Totalförtjänst").innerHTML = totalt;
+}
+function ServetterFunc(val)
+{
+	antalservetter = val;
+	document.getElementById("servettbox").value = val;
+	document.getElementById("servettrange").value = val;
+	totalt = antalsäljare * (antalnightshade*20) + (antalservetter*10) + (antalljus*25) + (antaltvål*5);
+	document.getElementById("Totalförtjänst").innerHTML = totalt;
+}
+</script>
+<style type="text/css">
+	@charset "UTF-8";
+/* CSS Document */
+#box
+{
+	height:90%;
+	width:80%;
+	margin-left:10%;
+	margin-top:1.5%;
+	border: 2px;
+	border-style: solid;
+	font-family:Lucida Grande;
+	color:#B2B2B2;
+	position: absolute;
+}
+#box2
+{
+	margin-left:3%;
+	margin-top:3%;
+}
+h1
+{
+	font-size: 30px;
+}
+h2
+{
+	font-size:25px;
+	padding-bottom:2%;
+}
+h3
+{
+	font-size: 20px;
+	margin:5px;
+}
+h4
+{
+	margin-top:5px;
+	margin-bottom:20%;
+}
+#total
+{
+	padding-left:1%;
+	text-decoration: underline;
+}
+.inputboxar
+{
+	width:50px;
+	height:20px;
+	color:#B2B2B2;
+}
+.sliders
+{
+	width:70%;
+	margin:0;
+	padding:0;
+}
+.grupp
+{
+	text-align: center; 
+	width:50%;
+	float:left;
+}
+	input[type=range]{
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 10px;
+    background: #FFF;
+    border: 2px #B2B2B2 solid;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 20px;
+    width: 16px;
+    border-radius: 20%;
+    background: #9C9C9C;
+    margin-top: -7px;
+}
+	input[type=range]::-webkit-slider-thumb:hover {
+    -webkit-appearance: none;
+    border: none;
+    height: 20px;
+    width: 16px;
+    border-radius: 20%;
+    background: #7D7F80;
+    margin-top: -7px;
+	}
+input[type=range]:focus {
+    outline: none;
+}
+	</style>
+</head>
+
+<body>
+	<div id="box">
+		<div id="box2">
+			<h1>Så mycket tjänar ni:</h1>
+			<h1 id="total"><span id="Totalförtjänst">0</span>kr</h1>
+			<br>
+			<h2>Antal säljare: <input type="text" placeholder="1-50" oninput="säljareFunc(this.value)" class="inputboxar"></h2>
+			</div>
+			<div class="grupp">
+				<h3>Produkt: Night Shade</h3>
+				<input type="range" min="0" max="50" value="0" oninput="NightshadeFunc(this.value)" id="nightrange" class="sliders">
+				<h4>Antal: <input type="text" placeholder="0-50" oninput="NightshadeFunc(this.value)" id="nightbox" class="inputboxar"></h4>
+			</div>
+			
+			<div class="grupp">
+				<h3>Produkt: 48-pack värmeljus</h3>
+				<input type="range" min="0" max="50" value="0" oninput="LjusFunc(this.value)" id="ljusrange" class="sliders">
+				<h4>Antal: <input type="text" placeholder="0-50" oninput="LjusFunc(this.value)" id="ljusbox" class="inputboxar"></h4>
+			</div>
+			
+			<div class="grupp">
+				<h3>Produkt: Bambutvål</h3>
+				<input type="range" min="0" max="50" value="0" oninput="bambuFunc(this.value)" id="tvålrange" class="sliders">
+				<h4>Antal: <input type="text" placeholder="0-50" oninput="bambuFunc(this.value)" id="tvålbox" class="inputboxar"></h4>
+			</div>
+			
+			<div class="grupp">
+				<h3>Produkt: Servetter</h3>
+				<input type="range" min="0" max="50" value="0" oninput="ServetterFunc(this.value)" id="servettrange" class="sliders">
+				<h4>Antal: <input type="text" placeholder="0-50" oninput="ServetterFunc(this.value)" id="servettbox" class="inputboxar"></h4>
+			</div>
+	</div>
+</body>
+</html>
