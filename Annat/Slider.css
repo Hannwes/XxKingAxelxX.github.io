@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* CSS Document */
+#box
+{
+	height:90%;
+	width:80%;
+	margin-left:10%;
+	border: 2px;
+	border-style: solid;
+	font-family:Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana," sans-serif";
+	color:#B2B2B2;
+	position: absolute;
+}
+#box2
+{
+	margin-left:3%;
+	margin-top:3%;
+}
+h1
+{
+	font-size: 30px;
+}
+h2
+{
+	font-size:25px;
+	padding-bottom:2%;
+}
+h3
+{
+	font-size: 20px;
+	margin:5px;
+}
+h4
+{
+	margin-top:5px;
+	margin-bottom:20%;
+}
+
+#total
+{
+	padding-left:1%;
+}
+
+.inputboxar
+{
+	width:50px;
+	height:20px;
+}
+.sliders
+{
+	width:20%;
+	margin:0;
+	padding:0;
+}
+
+.grupp
+{
+	text-align: center; 
+	width:50%;
+	float:left;
+}
