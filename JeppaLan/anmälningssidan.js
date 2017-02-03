@@ -1,7 +1,4 @@
 // JavaScript Document
-
-window.onload = loadfunction;
-
 var rad1namn = ["","","","","","","","","","","","","","","","","","","","",""];
 var rad2namn = ["","","","","","","","","","","","","","","","","","","","",""];
 var rad3namn = ["","","","","","","","","","","","","","","","","","","","",""];
@@ -10,26 +7,29 @@ var rad2tnr = [];
 var rad3tnr = [];
 var namn = "";
 var raden;
-var platsen = 0;
+var platsen;
 var tnr = "";
 var x;
-var klick = true;
-var y;
 
-function loadfunction(){
-	
-}
 
 function anmalan(rad, plats){
+	
 	x = "p" + rad + plats; 
 	raden = rad;
 	platsen = plats;
-	document.getElementById("input").style.display = "block";
+	
+	if(document.getElementById(x).style.backgroundColor == "red"){
+	}
+	
+	else{
+		document.getElementById("input").style.display = "block";
 	document.getElementById("bordnummer").innerHTML = rad + "." + plats;
 	namn = "";
 	tnr = "";
 	document.getElementById("namninput").value = "";
 	document.getElementById("nrinput").value = "";
+	}
+	
 }
 
 function avbryt(){
@@ -45,10 +45,7 @@ function inputnr(val){
 
 function anmal(){
 	
-	y = x + "a"
-	
-	document.getElementById(x).style.backgroundColor = "red";
-	document.getElementById(y).innerHTML = namn;
+	if(namn != "" && tnr != ""){
 	 switch(raden)
 		{
 			case '1':
@@ -63,7 +60,11 @@ function anmal(){
 				rad3namn[platsen-1] = namn;
 				rad3tnr[platsen-1] = tnr;
 				break;
-		document.getElementById("input").style.display = "none";
 	}
-
+		document.getElementById("input").style.display = "none";
+		document.getElementById(x).style.backgroundColor = "red";
+	}
+	else{
+		window.alert("Fyll i fälten");
+	}
 }
