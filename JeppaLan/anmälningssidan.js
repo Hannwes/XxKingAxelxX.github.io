@@ -65,7 +65,5 @@ function anmal(){
 				break;
 		document.getElementById("input").style.display = "none";
 	}
-	else{
-		window.alert("");
-	}
+
 }
