@@ -12,27 +12,72 @@ body{
 }
 
 #storbox{
-	height:150%;
-	width:90%;
-	margin-left:5%;
+	height:120%;
+	width:80%;
+	margin-left:10%;
 	position:absolute;
 	background-color: #000;
 }
 
 #startheader{
 	width:100%;
-	height:auto;
-	overflow: hidden;
+	background-image: url(Jeppebanner.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height:28%;
 }
+
+#startnav{
+	height:10%;
+	width:100%;
+}
+
+#startul{
+	height:100%;
+	width:100%;
+	list-style: none;
+	padding:0;
+	margin:0;
+	border-bottom:8px solid #FFF;
+}
+
+.startli{
+	width:50%;
+	float:left;
+	margin:0;
+	padding:0;
+	text-align: center;
+	padding-top:2%;
+}
+
+.nava:link{
+	color:#FFF;
+	text-decoration: none;
+	font-family: "Caviar";
+	font-size: 26px;
+	margin: 0;
+	padding:0;
+}
+
+.nava:hover{
+	color:#FFF;
+	text-decoration: underline;
+}
+
+.nava:visited{
+	color:#FFF;
+}
+
 
 #startarticle{
 	height:50%;
 }
 
 #TextBox{
-	height: 60%;
+	height: 70%;
 	width: 50%;
-	margin:5% 0 0 25%;
+	margin:3% 0 0 25%;
 	background:rgba(102,102,102,0.6);
 	border:8px solid #FFF;
 	text-align:center;
@@ -111,7 +156,7 @@ li{
 
 footer{
 	border-top:8px solid #FFF;
-	height:10%;
+	height:12%;
 	width:100%;
 	background-color:#d38500;
 	bottom:0;
